@@ -38,4 +38,5 @@ body {
   padding:0px 80px ;
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
 }

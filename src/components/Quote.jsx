@@ -1,14 +1,16 @@
 import React from "react";
+import { FaBookmark,FaRegBookmark } from "react-icons/fa";
 
 const quote = ({ content, author, isBookmark }) => {
+  const bookmark = isBookmark ? <FaBookmark/>:<FaRegBookmark/>;
   return (
     <div className="quote">
       <div className="quoteText">
-        The human spirit must prevail over technology
+        {content}
       </div>
       <div className="quoteBottom">
-        <div className="quoteAuthor">--Albert Einstein</div>
-        <div className="bookmark"></div>
+        <div className="quoteAuthor">--{author}</div>
+        <div className="bookmark">{bookmark}</div>
       </div>
     </div>
   );

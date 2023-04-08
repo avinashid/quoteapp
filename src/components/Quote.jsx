@@ -1,19 +1,38 @@
 import React from "react";
-import { FaBookmark,FaRegBookmark } from "react-icons/fa";
+import {
+  useDispatch as reduxDispatch,
+} from "react-redux";
+import { FaBookmark, FaRegBookmark } from "react-icons/fa";
+import {
+  addBookmark,
+  deleteBookmark,
+  toggleBookmark,
+} from "../features/StateSlice";
 
-const quote = ({ content, author, isBookmark }) => {
-  const bookmark = isBookmark ? <FaBookmark/>:<FaRegBookmark/>;
+const Quote = ({ content, author, isBookmark, _id, tags }) => {
+  const bookmark = isBookmark ? <FaBookmark /> : <FaRegBookmark />;
+  const dispatch = reduxDispatch();
+
+  const handleBookmarkToggle = () => {
+    if (!isBookmark) {
+      dispatch(addBookmark({ content, author, isBookmark, _id, tags }));
+    } else {
+      dispatch(deleteBookmark(_id));
+    }
+    dispatch(toggleBookmark(_id));
+  };
+
   return (
     <div className="quote">
-      <div className="quoteText">
-        {content}
-      </div>
+      <div className="quoteText">{content}</div>
       <div className="quoteBottom">
         <div className="quoteAuthor">--{author}</div>
-        <div className="bookmark">{bookmark}</div>
+        <div className="pointer" onClick={handleBookmarkToggle}>
+          {bookmark}
+        </div>
       </div>
     </div>
   );
 };
 
-export default quote;
+export default Quote;

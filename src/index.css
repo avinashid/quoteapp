@@ -5,6 +5,9 @@ body {
   background: linear-gradient(256.47deg, #5e2ab3 2.64%, #161e6c 140.46%);
   color: white;
 }
+.pointer {
+  cursor: pointer;
+}
 
 .header {
   display: flex;
@@ -17,7 +20,7 @@ body {
   line-height: 39px;
 }
 .quote {
-  width:80vw;
+  width: 80vw;
   max-width: 700px;
   display: flex;
   margin: auto;
@@ -31,12 +34,41 @@ body {
   padding: 40px;
   font-style: normal;
   font-weight: 400;
-  font-size: 30px;
+  font-size: 20px;
   line-height: 45px;
 }
-.quoteBottom{
-  padding:0px 80px ;
+.quoteBottom {
+  margin-bottom: 20px;
+  padding: 0px 80px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+}
+.bookmark {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: fit-content;
+  padding: 20px;
+  margin: auto;
+  gap: 10px;
+}
+select {
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+input {
+  background-color: #009c51;
+  color: white;
+  padding: 5px 20px;
+  border-radius: 20px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  box-shadow: 2px 2px 10px black;
 }

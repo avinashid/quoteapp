@@ -1,5 +1,41 @@
-body{
-  margin:0;
-  box-sizing: border-box;
+body {
+  margin: 0;
   padding: 0;
+  background-repeat: no-repeat;
+  background: linear-gradient(256.47deg, #5e2ab3 2.64%, #161e6c 140.46%);
+  color: white;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 39px 78px;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 26px;
+  line-height: 39px;
+}
+.quote {
+  width:80vw;
+  max-width: 700px;
+  display: flex;
+  margin: auto;
+  background-color: #d05252;
+  border-radius: 30px;
+  min-height: 200px;
+  flex-direction: column;
+  text-align: center;
+}
+.quoteText {
+  padding: 40px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 45px;
+}
+.quoteBottom{
+  padding:0px 80px ;
+  display: flex;
+  flex-direction: row;
 }
